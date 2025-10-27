@@ -10,7 +10,7 @@ It is based on the paper: [*Training language models to follow instructions with
 ### 1. Supervised Fine-Tuning (SFT)
 - **Pretrained model:** `gpt2`  
 - **LoRA configuration:** Model wrapped with a LoRA adapter (details in notebook)  
-- **Dataset:** [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) — single-turn instruction–completion pairs in the form:
+- **Dataset:** [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) — single-turn instruction–completion pairs I put in the form:
 
       Human: ...
       Assistant: ...
