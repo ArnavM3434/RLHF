@@ -1,30 +1,55 @@
-I did this project to gain more familiarity with RLHF as a whole. It is based on the InstructGPT paper (https://arxiv.org/abs/2203.02155).
+# RLHF Implementation (Based on InstructGPT)
 
-Stages
+I did this project to gain more familiarity with **Reinforcement Learning from Human Feedback (RLHF)** as a whole.  
+It is based on the paper: [*Training language models to follow instructions with human feedback (InstructGPT)*](https://arxiv.org/abs/2203.02155).
 
-SFT
-Pretrained model: gpt2
-Wrapped in a LoRA Config (see more details in the notebook)
-Fine tuned on Alpaca dataset (see more details in notebook) -> single turn instruction-completion prompts in the form "Human:... Assistant..."
-Calculated loss on completion only -> masked out the prompts and padding tokens
-Training loss converged around 2.15 (started around 2.7) -> similar results when trying multiple learning rates, adjusting LoRA configs, etc.
-Training runs below
-Achieved much better bleu score as well as much better completions compared to pretrained gpt2, see notebook
-Weights & Biases 
-![alt text](https://i.imgur.com/Smm5Ql8.png)
+---
 
+## 🧩 Stages
 
-Reward Model
-Used the Dahoas/rm-static dataset
-Used Bradley-Terry loss
-Added a reward head to my SFT model
-Unstable with validation accuracy fluctuating a lot (see notebook)
-Likely related to the fact that the distribution for this data was different (multi turn human-assistant examples)
+### 1. Supervised Fine-Tuning (SFT)
+- **Pretrained model:** `gpt2`  
+- **LoRA configuration:** Model wrapped with a LoRA adapter (details in notebook)  
+- **Dataset:** [Alpaca](https://github.com/tatsu-lab/stanford_alpaca) — single-turn instruction–completion pairs in the form:
 
-PPO (Proximal Policy Optimization)
-Used the Alpaca dataset for prompts
-See PPO Config in Notebooks
-Didn't really work, KL divergence remained negative despite trying multiple things, including normalizing rewards, tweaking generations, tightening KL coefficients, etc.
-Ended up trying a different reward model, which also did not give great results: OpenAssistant/reward-model-deberta-v3-base
-THIS IS A WORK IN PROGRESS
+      Human: ...
+      Assistant: ...
 
+- **Training details:**
+  - Loss computed on **completion only** (masked out prompts and padding tokens)
+  - Training loss converged around **2.15** (started around ~2.7)
+  - Results were consistent across multiple learning rates and LoRA configs  
+- **Outcome:**
+  - Much better **BLEU score** and **qualitative completions** than pretrained GPT-2  
+  - See training runs and examples in the notebook
+
+**Weights & Biases dashboard:**
+<p align="center">
+  <img src="https://i.imgur.com/Smm5Ql8.png" alt="Training loss curve" width="600"/>
+</p>
+
+---
+
+### 2. Reward Model
+- **Dataset:** `Dahoas/rm-static`  
+- **Loss function:** Bradley–Terry  
+- **Architecture:** Added a reward head to the SFT model  
+- **Observations:**
+  - Training was unstable — validation accuracy fluctuated significantly  
+  - Likely due to data distribution mismatch (multi-turn human–assistant examples)
+
+---
+
+### 3. Proximal Policy Optimization (PPO)
+- **Prompts:** Alpaca dataset  
+- **Config:** See PPO configuration in notebooks  
+- **Observations:**
+  - KL divergence remained **negative**, despite various adjustments:
+    - Reward normalization  
+    - Generation tweaks  
+    - Different KL coefficients  
+  - Tried another reward model (`OpenAssistant/reward-model-deberta-v3-base`), with similarly poor results  
+
+---
+
+🚧 **Status:** Work in Progress
