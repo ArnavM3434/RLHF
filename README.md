@@ -22,8 +22,6 @@ PPO (Proximal Policy Optimization)
 Used the Alpaca dataset for prompts
 See PPO Config in Notebooks
 Didn't really work, KL divergence remained negative despite trying multiple things, including normalizing rewards, tweaking generations, tightening KL coefficients, etc.
-Ended up trying a different reward model, which also did not give great results
+Ended up trying a different reward model, which also did not give great results: OpenAssistant/reward-model-deberta-v3-base
 THIS IS A WORK IN PROGRESS
-
-
 
