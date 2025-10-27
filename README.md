@@ -48,7 +48,9 @@ It is based on the paper: [*Training language models to follow instructions with
   - KL divergence remained **negative**, despite various adjustments:
     - Reward normalization  
     - Generation tweaks  
-    - Different KL coefficients  
+    - Different KL coefficients
+    - Different clip ranges
+    - Different reward models 
   - Tried another reward model (`OpenAssistant/reward-model-deberta-v3-base`), with similarly poor results
   - Still working on this part
 
