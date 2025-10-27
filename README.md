@@ -11,7 +11,8 @@ Training loss converged around 2.15 (started around 2.7)
 Training runs below
 
 Reward Model
-Used the 
+Used the Dahoas/rm-static dataset
+Bad results
 
 PPO (Proximal Policy Optimization)
 
