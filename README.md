@@ -10,7 +10,9 @@ Calculated loss on completion only -> masked out the prompts and padding tokens
 Training loss converged around 2.15 (started around 2.7) -> similar results when trying multiple learning rates, adjusting LoRA configs, etc.
 Training runs below
 Achieved much better bleu score as well as much better completions compared to pretrained gpt2, see notebook
-![alt text](https://github.com/[ArnavM3434]/[RLHF]/SFT/blob/[main]/sftplot?raw=true)
+Weights & Biases 
+![alt text](https://imgur.com/a/kk74oEE)
+
 
 Reward Model
 Used the Dahoas/rm-static dataset
