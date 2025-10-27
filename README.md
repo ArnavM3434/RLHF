@@ -36,7 +36,8 @@ It is based on the paper: [*Training language models to follow instructions with
 - **Architecture:** Added a reward head to the SFT model  
 - **Observations:**
   - Training was unstable — validation accuracy fluctuated significantly  
-  - Likely due to data distribution mismatch (multi-turn human–assistant examples)
+  - Likely due to data distribution mismatch (multi-turn human–assistant examples as opposed to single turn SFT was trained on)
+  - See results in notebook
 
 ---
 
