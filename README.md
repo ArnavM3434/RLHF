@@ -5,7 +5,7 @@ It is based on the paper: [*Training language models to follow instructions with
 
 ---
 
-## 🧩 Stages
+## Stages
 
 ### 1. Supervised Fine-Tuning (SFT)
 - **Pretrained model:** `gpt2`  
@@ -48,8 +48,8 @@ It is based on the paper: [*Training language models to follow instructions with
     - Reward normalization  
     - Generation tweaks  
     - Different KL coefficients  
-  - Tried another reward model (`OpenAssistant/reward-model-deberta-v3-base`), with similarly poor results  
+  - Tried another reward model (`OpenAssistant/reward-model-deberta-v3-base`), with similarly poor results
+  - Still working on this part
 
 ---
 
-🚧 **Status:** Work in Progress
