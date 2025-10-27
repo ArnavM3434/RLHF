@@ -11,7 +11,7 @@ Training loss converged around 2.15 (started around 2.7) -> similar results when
 Training runs below
 Achieved much better bleu score as well as much better completions compared to pretrained gpt2, see notebook
 Weights & Biases 
-![alt text](https://imgur.com/a/kk74oEE)
+![alt text](https://i.imgur.com/Smm5Ql8.png)
 
 
 Reward Model
