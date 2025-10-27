@@ -1,0 +1,7 @@
+transformers 
+datasets
+accelerate
+tensorboard
+peft 
+trl==0.11    
+torch
