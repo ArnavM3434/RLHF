@@ -3,6 +3,8 @@
 I did this project to gain more familiarity with **Reinforcement Learning from Human Feedback (RLHF)** as a whole.  
 It is based on the paper: [*Training language models to follow instructions with human feedback (InstructGPT)*](https://arxiv.org/abs/2203.02155).
 
+Models pushed to the hub here:
+https://huggingface.co/ArnavM3434
 ---
 
 ## Stages
