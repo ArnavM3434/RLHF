@@ -32,7 +32,7 @@ It is based on the paper: [*Training language models to follow instructions with
 
 ### 2. Reward Model
 - **Dataset:** `Dahoas/rm-static`  
-- **Loss function:** Bradley–Terry  
+- **Loss function:** from Bradley–Terry pairwise ranking
 - **Architecture:** Added a reward head to the SFT model  
 - **Observations:**
   - Training was unstable — validation accuracy fluctuated significantly  
