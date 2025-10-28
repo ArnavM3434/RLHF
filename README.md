@@ -21,7 +21,7 @@ It is based on the paper: [*Training language models to follow instructions with
   - Results were consistent across multiple learning rates and LoRA configs  
 - **Outcome:**
   - Much better **BLEU score** and **qualitative completions** than pretrained GPT-2  
-  - See training runs and examples in the notebook (Note: The notebook loss starts small because this was the 3rd or 4th from an existing checkpoint)
+  - See training runs and examples in the notebook (Note: The notebook loss starts small because this was the 3rd or 4th run from an existing checkpoint)
 
 **Weights & Biases dashboard:**
 <p align="center">
