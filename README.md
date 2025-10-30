@@ -37,9 +37,8 @@ https://huggingface.co/ArnavM3434
 - **Loss function:** from Bradley–Terry pairwise ranking
 - **Architecture:** Added a reward head to the SFT model  
 - **Observations:**
-  - Training was unstable — validation accuracy fluctuated significantly  
-  - Likely due to data distribution mismatch (multi-turn human–assistant examples as opposed to single turn SFT was trained on)
-  - See results in notebook
+  - Training loss converged around 0.65. Validation accuracy converged around 61%
+  - I modified the data to only be single turn completions to better match the distribution the SFT model was trained on, yieled better results than using the raw 'Dahoas/rm-static'
 
 ---
 
