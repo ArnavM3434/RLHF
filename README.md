@@ -44,7 +44,7 @@ https://huggingface.co/ArnavM3434
 
 ### 3. Proximal Policy Optimization (PPO)
 - **Prompts:** Alpaca dataset  
-- **Config:** See PPO configuration in notebooks  
+- **Config:** See PPO configuration in notebooks.
 - **Observations:**
   - KL divergence remained **negative**, despite various adjustments:
     - Reward normalization  
@@ -53,7 +53,7 @@ https://huggingface.co/ArnavM3434
     - Different clip ranges
     - Different reward models 
   - Tried another reward model (`OpenAssistant/reward-model-deberta-v3-base`), with similarly poor results
-  - Still working on this part
+  - Still working on this part, will probably just write my own loop instead of using PPO trainer to debug.
 
 ---
 
