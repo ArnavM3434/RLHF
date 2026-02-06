@@ -38,7 +38,7 @@ https://huggingface.co/ArnavM3434
 - **Architecture:** Added a reward head to the SFT model  
 - **Observations:**
   - Training loss converged around 0.65. Validation accuracy converged around 61%
-  - I modified the data to only be single turn completions to better match the distribution the SFT model was trained on, yieled better results than using the raw 'Dahoas/rm-static'
+  - I modified the data to only be single turn completions to better match the distribution the SFT model was trained on, yielding better results than using the raw 'Dahoas/rm-static'
 
 ---
 
