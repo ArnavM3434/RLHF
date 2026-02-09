@@ -44,7 +44,7 @@ https://huggingface.co/ArnavM3434
 
 ### 3. Proximal Policy Optimization (PPO)
 -**Work in Progress**
-  - Instead of using POTrainer will try and achieve convergence with a more careful PyTorch loop and retraining the SFT and Reward model on better data
+  - Instead of using PPOTrainer, I will try and achieve convergence with a more careful PPO implementation in PyTorch and retraining the SFT and Reward model on better data
 - **Prompts:** Alpaca dataset  
 - **Config:** See PPO configuration in notebooks.
 - **Observations:**
@@ -53,9 +53,13 @@ https://huggingface.co/ArnavM3434
     - Generation tweaks  
     - Different KL coefficients
     - Different clip ranges
-    - Different reward models 
+    - Different reward models
+  - Might have something to do with the padding PPOTrainer expects
   - Tried another reward model (`OpenAssistant/reward-model-deberta-v3-base`), with similarly poor results
   - Still working on this part, will probably just write my own loop instead of using PPO trainer to debug.
+ 
+### 4. Evals
+- Better evals in progress, will try actual benchmarks instead of just BLEU scores and qualitatively looking at generation
 
 ---
 
