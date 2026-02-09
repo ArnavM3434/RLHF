@@ -43,6 +43,8 @@ https://huggingface.co/ArnavM3434
 ---
 
 ### 3. Proximal Policy Optimization (PPO)
+-**Work in Progress**
+  - Instead of using POTrainer will try and achieve divergence with a more careful PyTorch loop and retraining the SFT and Reward model on better data
 - **Prompts:** Alpaca dataset  
 - **Config:** See PPO configuration in notebooks.
 - **Observations:**
